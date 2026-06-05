@@ -25,7 +25,9 @@ const supabaseAnonKey = (typeof import.meta !== 'undefined' && import.meta.env &
 export const isSupabaseConfigured = true;
 
 // Create the Supabase client
+// console.log("SUPABASE URL =", supabaseUrl);
 console.log("SUPABASE URL =", supabaseUrl);
+console.log("SUPABASE KEY =", supabaseAnonKey.substring(0,20));
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 
