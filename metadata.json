@@ -1,0 +1,8 @@
+{
+  "name": "Smart Attendance Hub",
+  "description": "Centralized platform where admins manage sessions, students attend via QR codes, assign resources, submit assignments, and generate analytics reports using Supabase.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
