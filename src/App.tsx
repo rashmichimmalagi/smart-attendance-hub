@@ -263,17 +263,32 @@ export default function App() {
     showToast(`Access Granted as ${userRole.toUpperCase()}`, 'success');
   };
 
+  // const handleLogout = async () => {
+  //   try {
+  //     await authService.signOut();
+  //     setProfile(null);
+  //     setRole(null);
+  //     showToast('Logged out of Smart Attendance Hub.', 'info');
+  //   } catch {
+  //     showToast('Error signs you out.', 'error');
+  //   }
+  // };
+
   const handleLogout = async () => {
+    console.log("LOGOUT CLICKED");
+
     try {
       await authService.signOut();
+      console.log("SIGNOUT COMPLETED");
+
       setProfile(null);
       setRole(null);
       showToast('Logged out of Smart Attendance Hub.', 'info');
-    } catch {
+    } catch (err) {
+      console.error("LOGOUT ERROR", err);
       showToast('Error signs you out.', 'error');
     }
-  };
-
+};
   if (initializing) {
     return (
       <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col items-center justify-center font-sans relative overflow-hidden">
