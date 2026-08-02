@@ -1,0 +1,62 @@
+167:  const [sessionForm, setSessionForm] = useState({
+434:    if (sessionForm.date < todayStr) {
+439:    if (sessionForm.date === todayStr && sessionForm.startTime < timeNowStr) {
+444:    if (sessionForm.endTime <= sessionForm.startTime) {
+452:          name: sessionForm.name,
+453:          description: sessionForm.description,
+454:          date: sessionForm.date,
+455:          startTime: sessionForm.startTime,
+456:          endTime: sessionForm.endTime,
+457:          venue: sessionForm.venue,
+458:          hostedBy: sessionForm.hostedBy,
+459:          resourcePerson: sessionForm.resourcePerson,
+460:          numberOfVolunteers: Number(sessionForm.numberOfVolunteers),
+461:          volunteers: sessionForm.volunteers,
+462:          authorizedAdminIds: sessionForm.authorizedAdminIds
+465:          showToast(`Successfully updated session "${sessionForm.name}"`, 'success');
+474:          name: sessionForm.name,
+475:          description: sessionForm.description,
+476:          date: sessionForm.date,
+477:          startTime: sessionForm.startTime,
+478:          endTime: sessionForm.endTime,
+479:          venue: sessionForm.venue,
+480:          hostedBy: sessionForm.hostedBy,
+481:          resourcePerson: sessionForm.resourcePerson,
+482:          numberOfVolunteers: Number(sessionForm.numberOfVolunteers),
+483:          volunteers: sessionForm.volunteers,
+485:          authorizedAdminIds: sessionForm.authorizedAdminIds
+488:          showToast(`Published Live session: "${sessionForm.name}"`, 'success');
+1065:  const startMinTime = sessionForm.date === localToday
+2889:                  value={sessionForm.name}
+2890:                  onChange={(e) => setSessionForm({...sessionForm, name: e.target.value})}
+2899:                  value={sessionForm.description}
+2900:                  onChange={(e) => setSessionForm({...sessionForm, description: e.target.value})}
+2912:                    value={sessionForm.date}
+2913:                    onChange={(e) => setSessionForm({...sessionForm, date: e.target.value})}
+2923:                    value={sessionForm.startTime}
+2924:                    onChange={(e) => setSessionForm({...sessionForm, startTime: e.target.value})}
+2934:                    value={sessionForm.endTime}
+2935:                    onChange={(e) => setSessionForm({...sessionForm, endTime: e.target.value})}
+2948:                    value={sessionForm.venue}
+2949:                    onChange={(e) => setSessionForm({...sessionForm, venue: e.target.value})}
+2959:                    value={sessionForm.resourcePerson}
+2960:                    onChange={(e) => setSessionForm({...sessionForm, resourcePerson: e.target.value})}
+2973:                    value={sessionForm.hostedBy}
+2974:                    onChange={(e) => setSessionForm({...sessionForm, hostedBy: e.target.value})}
+2984:                    value={sessionForm.numberOfVolunteers}
+2987:                      let arr = [...(sessionForm.volunteers || [])];
+2994:                        ...sessionForm,
+3004:              {sessionForm.numberOfVolunteers > 0 && (
+3011:                        const updatedVolunteers = [...(sessionForm.volunteers || []), ''];
+3013:                          ...sessionForm,
+3025:                    {Array.from({ length: sessionForm.numberOfVolunteers }).map((_, idx) => {
+3026:                      const value = sessionForm.volunteers && sessionForm.volunteers[idx] !== undefined ? sessionForm.volunteers[idx] : '';
+3036:                              const arr = [...(sessionForm.volunteers || [])];
+3039:                              setSessionForm({ ...sessionForm, volunteers: arr });
+3046:                              const arr = (sessionForm.volunteers || []).filter((_, i) => i !== idx);
+3048:                                ...sessionForm,
+3050:                                numberOfVolunteers: Math.max(0, sessionForm.numberOfVolunteers - 1)
+3073:                      const isChecked = sessionForm.authorizedAdminIds?.includes(ap.id);
+3082:                                ? [...(sessionForm.authorizedAdminIds || []), ap.id]
+3083:                                : (sessionForm.authorizedAdminIds || []).filter(id => id !== ap.id);
+3084:                              setSessionForm({ ...sessionForm, authorizedAdminIds: updated });
