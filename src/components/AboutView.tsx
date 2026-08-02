@@ -286,7 +286,7 @@ export default function AboutView() {
         </h3>
         <div className="flex flex-wrap gap-4">
           <a
-            href={GITHUB_URL || "https://github.com/rashmi-mc/smart-attendance-hub"}
+            href={GITHUB_URL || "https://github.com/rashmichimmalagi/smart-attendance-hub"}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 px-4 py-2 bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-slate-700 text-xs font-semibold text-slate-200 hover:text-white rounded-xl transition-all shadow-sm cursor-pointer select-none"
@@ -295,7 +295,7 @@ export default function AboutView() {
             <span>GitHub Repository</span>
           </a>
           <a
-            href={LIVE_APP_URL || "https://smart-attendance-hub.vercel.app"}
+            href={LIVE_APP_URL || "https://smart-attendance-hub-six.vercel.app/"}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 px-4 py-2 bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-slate-700 text-xs font-semibold text-slate-200 hover:text-white rounded-xl transition-all shadow-sm cursor-pointer select-none"
